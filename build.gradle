@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.feng'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        //公司maven仓库
+        url 'https://repo.log56.com/nexus3/repository/maven-public/'
+        credentials {
+            username "log56repo"
+            password "log56repo!@#*("
+        }
+    }
+    maven { url 'https://jitpack.io' }
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
